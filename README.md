@@ -44,3 +44,54 @@ Clone the repository to your local machine:
 git clone https://github.com/James-sjt/DiffusionMamba
 cd DiffusionMamba
 ```
+## 🧪 Stage 1: Diffusion-Based Image Enhancement
+
+Navigate to the image enhancement module:
+```bash
+cd Diffusion_based_Image_Enhancement-master
+```
+# 📦 Step 1: Dataset Preparation
+
+Extract and preprocess the dataset:
+```bash
+python extractDataset.py
+```
+
+# 🧬 Step 2: VAE Training (Optional)
+
+Train the Variational Autoencoder (VAE) for latent representation learning:
+``` bash
+python VAE.py
+```
+ℹ️ This step can be skipped if pre-trained VAE parameters are used.
+
+Evaluate the VAE performance:
+```bash
+python VAEInference.py
+python StatsComputer.py
+```
+
+#🌫️ Step 3: Latent Diffusion Model (DDPM)
+
+Train the latent diffusion model:
+```bash
+python latentDiffusion.py
+```
+⚡ By default, pre-trained parameters are loaded. Training may be skipped if you only need inference.
+
+# 🖼️ Step 4: Image Enhancement Inference
+
+Generate enhanced high-quality MRI samples:
+```bash
+python inferenceLDM.py
+```
+Construct the enhanced MRI dataset for the segmentation stage:
+```bash
+python sampleEnhancedImg.py
+```
+## 🧠 Stage 2: Mamba-Based Segmentation
+
+Navigate to the segmentation module:
+```bash
+cd ../Mamba_based_Segmentation
+```
