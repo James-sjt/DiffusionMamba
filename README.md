@@ -31,7 +31,7 @@ DiffusionMamba/
 │   ├── sampleEnhancedImg.py
 │   ├── extractDataset.py
 │   └── ...
-├── Mamba_based_Segmentation/
+├── segMamba/
 │   └── ...
 └── README.md
 ```
@@ -93,5 +93,5 @@ python sampleEnhancedImg.py
 
 Navigate to the segmentation module:
 ```bash
-cd ../Mamba_based_Segmentation
+cd ../segMamba
 ```
