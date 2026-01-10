@@ -44,6 +44,10 @@ Clone the repository to your local machine:
 git clone https://github.com/James-sjt/DiffusionMamba
 cd DiffusionMamba
 ```
+And to install the required Python packages:
+```bash
+pip install -r requirements.txt
+```
 # 🧪 Stage 1: Diffusion-Based Image Enhancement
 
 Navigate to the image enhancement module:
