@@ -246,3 +246,40 @@ Select the desired model directory and start training:
 python train.py
 ```
 Each baseline model (UNet, Mamba-UNet, TransUNet, etc.) is provided with its own training configuration in this directory.
+
+# 📊 Quantitative Results
+
+This section reports representative quantitative results to demonstrate the effectiveness of the proposed diffusion-based image enhancement module and the Mamba-based segmentation framework.  
+All results are averaged over the test set.
+
+> 📌 For full experimental details and statistical analysis, please refer to the accompanying paper.
+
+---
+
+### 🎨 Image Enhancement Quality
+
+| Method                | PSNR ↑ | SSIM ↑ | GMSD ↓ |
+|-----------------------|--------|--------|---------|
+| Input (Low-quality)   |  25.77dB  |  0.6543 |  0.0812  |
+| GAN-based Enhancement |  31.20dB  |  0.8216 |  0.0599  |
+| **DiffusionMamba (Ours)** | **33.73dB** | **0.9241** | **0.0265** |
+
+↑ Higher is better  ↓ Lower is better
+
+---
+
+### 🧠 Segmentation Performance
+
+| Model                    | Dice ↑ | IoU ↑ | HD95 ↓| NSD ↑ |
+|--------------------------|--------|-------|-------|-------|
+| UNet                     |  x.xxx | x.xxx |       |       |
+| TransUNet                |  x.xxx | x.xxx |       |       |
+| Mamba-UNet               |  x.xxx | x.xxx |       |       |
+| Teacher                  |  x.xxx | x.xxx |       |       |
+| Student (No KD)          |  x.xxx | x.xxx |       |       |
+| **Student (Targeted KD)** | **x.xxx** | **x.xxx** |       |       |
+
+↑ Higher is better
+
+---
+
