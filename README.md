@@ -292,3 +292,8 @@ Low-quality input MRI · Diffusion-based enhancement (Ours) · GAN-based enhance
 ![Enhancement Comparison](comparisons.png)
 
 The diffusion-based model produces images with clearer anatomical boundaries, improved contrast consistency, and fewer hallucinated structures compared with the GAN-based method.
+
+**Targeted Knowledge Distillation**
+![KD](KD.png)
+Visualization of the proposed knowledge distillation strategy. The red regions denote the focus regions where the teacher prediction is correct while the student prediction is incorrect. The soft loss is applied exclusively to these regions to guide efficient student learning.
+
