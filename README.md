@@ -133,7 +133,7 @@ python knowledgeDistillation.py
 ```
 This process improves the student model’s segmentation accuracy while maintaining lower computational complexity, and can also be skipped by using pre-trained parameters.
 
-##🔍 Step 4: Model Inference
+## 🔍 Step 4: Model Inference
 
 Run inference using the trained models:
 
