@@ -270,16 +270,17 @@ All results are averaged over the test set.
 
 ### 🧠 Segmentation Performance
 
-| Model                    | Dice ↑ | IoU ↑ | HD95 ↓| NSD ↑ |
-|--------------------------|--------|-------|-------|-------|
-| UNet                     |  x.xxx | x.xxx |       |       |
-| TransUNet                |  x.xxx | x.xxx |       |       |
-| Mamba-UNet               |  x.xxx | x.xxx |       |       |
-| Teacher                  |  x.xxx | x.xxx |       |       |
-| Student (No KD)          |  x.xxx | x.xxx |       |       |
-| **Student (Targeted KD)** | **x.xxx** | **x.xxx** |       |       |
+| Model                     | Dice ↑ | IoU ↑ | HD95 ↓ | NSD ↑ |
+|---------------------------|--------|-------|--------|-------|
+| UNet                      | 0.9218 | 0.8960 | 2.3009 | 0.8110 |
+| TransUNet                 | 0.9210 | 0.8949 | 2.5766 | 0.8057 |
+| Mamba-UNet                | 0.9037 | 0.8747 | 2.6060 | 0.7709 |
+| Teacher                   | 0.9222 | 0.8961 | 2.1547 | 0.8118 |
+| Student (No KD)           | 0.9170 | 0.8905 | 2.4514 | 0.8037 |
+| **Student (Targeted KD)** | **0.9235** | **0.8977** | **2.0172** | **0.8134** |
 
-↑ Higher is better
+
+↑ Higher is better  ↓ Lower is better
 
 ---
 
