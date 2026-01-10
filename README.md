@@ -90,8 +90,63 @@ Construct the enhanced MRI dataset for the segmentation stage:
 python sampleEnhancedImg.py
 ```
 # 🧠 Stage 2: Mamba-Based Segmentation
+This stage performs accurate medical image segmentation using a Mamba-based architecture.  
+The pipeline supports **teacher–student training** and **knowledge distillation** for efficient inference.
+
+---
 
 Navigate to the segmentation module:
 ```bash
 cd ../segMamba
+```
+## 📦 Dataset Preparation
+
+If you have already generated the enhanced MRI dataset during the **diffusion-based image enhancement sampling stage**, you may skip this step.
+
+Otherwise, extract the segmentation dataset by running:
+
+```bash
+python extractDataset.py
+unzip dataSeg.zip
+```
+## 🧑‍🏫 Step 1: Train the Teacher Model (Optional)
+
+Train the teacher segmentation model:
+```bash
+python trainSeg.py --model_name teacher
+```
+ℹ️ This step can be skipped if you prefer to use the provided pre-trained teacher model parameters in the following stages.
+
+## 🎓 Step 2: Pre-train the Student Model (Optional)
+
+Pre-train the student segmentation model on the dataset:
+```bash
+python trainSeg.py --model_name student
+```
+⚡ This step can also be skipped if pre-trained student model parameters are available.
+
+## 🔁 Step 3: Knowledge Distillation
+
+Perform knowledge distillation to transfer structured knowledge from the teacher to the student model:
+```bash
+python knowledgeDistillation.py
+```
+This process improves the student model’s segmentation accuracy while maintaining lower computational complexity, and can also be skipped by using pre-trained parameters.
+
+##🔍 Step 4: Model Inference
+
+Run inference using the trained models:
+
+Student model inference
+```bash
+python inference.py --model_name student
+```
+Teacher model inference
+```bash
+python inference.py --model_name teacher
+```
+The segmentation samples are saved in the following directories:
+```bash
+studentSamples/
+teacherSamples/
 ```
