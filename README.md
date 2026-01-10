@@ -284,3 +284,11 @@ All results are averaged over the test set.
 
 ---
 
+### 🎨 Image Enhancement Comparison
+
+**From left to right:**  
+Low-quality input MRI · Diffusion-based enhancement (Ours) · GAN-based enhancement
+
+![Enhancement Comparison](assets/enhancement_comparison.png)
+
+The diffusion-based model produces images with clearer anatomical boundaries, improved contrast consistency, and fewer hallucinated structures compared with the GAN-based method.
