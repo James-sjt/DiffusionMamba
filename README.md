@@ -44,7 +44,7 @@ Clone the repository to your local machine:
 git clone https://github.com/James-sjt/DiffusionMamba
 cd DiffusionMamba
 ```
-And to install the required Python packages:
+And to install the required Python packages **(NVIDIA GPU IS REQUIRED!)**:
 ```bash
 pip install -r requirements.txt
 ```
