@@ -288,6 +288,20 @@ All results are averaged over the test set.
 
 ---
 
+### 🧠 Targeted Knowledge Distillation Performance
+
+| Method                     | Dice ↑ | IoU ↑ | HD95 ↓ | NSD ↑ |
+|---------------------------|--------|-------|--------|-------|
+| Teacher                   | 0.9222 | 0.8961 | 2.1547 | 0.8118 |
+| Student (No KD)           | 0.9170 | 0.8905 | 2.4514 | 0.8037 |
+| Student Guided by Original KD | 0.9168 | 0.8776 | 2.4620 | 0.7991 |
+| **Student Guided by Ours KD** | **0.9235** | **0.8977** | **2.0172** | **0.8134** |
+
+
+↑ Higher is better  ↓ Lower is better
+
+---
+
 ### 🎨 Image Enhancement Comparison
 
 **From left to right:**  
