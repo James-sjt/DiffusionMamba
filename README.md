@@ -253,7 +253,7 @@ Each baseline model (UNet, Mamba-UNet, TransUNet, etc.) is provided with its own
 
 # 📊 Quantitative Results
 
-This section reports representative quantitative results to demonstrate the effectiveness of the proposed diffusion-based image enhancement module and the Mamba-based segmentation framework.  
+This section reports representative quantitative results to demonstrate the effectiveness of the proposed diffusion-based image enhancement module, the Mamba-based segmentation framework and the targeted knowledge distillation.  
 All results are averaged over the test set.
 
 > 📌 For full experimental details and statistical analysis, please refer to the accompanying paper.
@@ -282,6 +282,19 @@ All results are averaged over the test set.
 | Teacher                   | 0.9222 | 0.8961 | 2.1547 | 0.8118 |
 | Student (No KD)           | 0.9170 | 0.8905 | 2.4514 | 0.8037 |
 | **Student (Targeted KD)** | **0.9235** | **0.8977** | **2.0172** | **0.8134** |
+
+
+↑ Higher is better  ↓ Lower is better
+
+---
+
+### 🧠 Experiment on Complementarity
+
+| Model                     | Dice ↑ | IoU ↑ | HD95 ↓ | NSD ↑ |
+|---------------------------|--------|-------|--------|-------|
+| Original-only             | 0.9037 | 0.8747 | 2.6060 | 0.7709 |
+| Enhanced-only          | 0.9128 | 0.8928 | 2.3320 | 0.8043 |
+| **Cross-attention Fusion (Ours)** | **0.9235** | **0.8977** | **2.0172** | **0.8134** |
 
 
 ↑ Higher is better  ↓ Lower is better
