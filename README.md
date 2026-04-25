@@ -56,7 +56,7 @@ cd Diffusion_based_Image_Enhancement-master
 ```
 ## 📦 Step 1: Dataset Preparation
 
-Extract and preprocess the dataset:
+Download and preprocess the dataset:
 ```bash
 python extractDataset.py
 ```
